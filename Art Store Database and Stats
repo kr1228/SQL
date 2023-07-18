@@ -1,0 +1,28 @@
+--Create an art store databse
+
+CREATE TABLE art_store (id INTEGER PRIMARY KEY, category TEXT, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
+INSERT INTO art_store VALUES (1, "Paint", "Oil Paint", 16,2,10.00);
+INSERT INTO art_store VALUES (2, "Paint", "Acrylic Paint", 11,2,8.25);
+INSERT INTO art_store VALUES (3, "Paint", "Canvas", 7,2,21.75);
+INSERT INTO art_store VALUES (4, "Paint", "Brush", 28,2,12.00);
+INSERT INTO art_store VALUES (5, "Draw", "Pastel", 21,3,16.50);
+INSERT INTO art_store VALUES (6, "Draw", "Pencil", 64,3,4.25);
+INSERT INTO art_store VALUES (7, "Draw", "Ink", 3,3,5.25);
+INSERT INTO art_store VALUES (8, "Draw", "Paper", 102,3,6.00);
+INSERT INTO art_store VALUES (9, "Textile", "Fabric", 45,4,4.50);
+INSERT INTO art_store VALUES (10, "Textile", "Yarn", 36,4,5.75);
+INSERT INTO art_store VALUES (11, "Textile", "Thread", 26,4,1.00);
+INSERT INTO art_store VALUES (12, "Textile", "Needle", 22,4,2.50);
+INSERT INTO art_store VALUES (13, "Textile", "Hook", 8,4,3.00);
+INSERT INTO art_store VALUES (14, "Textile", "Button", 11,4,1.25);
+INSERT INTO art_store VALUES (15, "3D", "Clay", 6,5,10.00);
+INSERT INTO art_store VALUES (16, "3D", "Wood", 8,5,13.75);
+INSERT INTO art_store VALUES (17, "3D", "Glass", 4,5,16.00);
+SELECT SUM(quantity) FROM art_store
+
+--display the database ordered by price.
+SELECT * FROM art_store ORDER BY price;
+
+--what is the sum of the quantity of products in the store?
+SELECT SUM(quantity) FROM art_store
